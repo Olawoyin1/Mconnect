@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <FaEnvelope className="h-4 w-4" />
-                <span>hello@fixmycar.uk</span>
+                <span>hello@mconnectc.uk</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <FaPhone className="h-4 w-4" />
@@ -106,9 +106,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-300 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 FixMyCar UK. All rights reserved.
+            © 2025 MConnectC UK. All rights reserved.
           </p>
           <div className="flex items-center space-x-2 text-sm text-muted-foreground mt-4 md:mt-0">
             <FaMapMarkerAlt className="h-4 w-4" />
