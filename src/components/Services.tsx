@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaWrench, FaSearch, FaFileAlt, FaCarBattery } from "react-icons/fa";
+// import { FaArrowRight, FaWrench, FaSearch, FaFileAlt, FaCarBattery } from "react-icons/fa";
 import { BsSpeedometer2, BsDisc, BsArrowRight } from "react-icons/bs";
 import { RiSettings3Line } from "react-icons/ri";
 import { GiAutoRepair } from "react-icons/gi";

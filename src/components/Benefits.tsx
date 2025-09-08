@@ -1,4 +1,4 @@
-import { FaUsers, FaAward, FaBolt, FaHandshake, FaArrowRight } from "react-icons/fa";
+// import { FaUsers, FaAward, FaBolt, FaHandshake, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PiUsersThree } from "react-icons/pi";
 import { LiaAwardSolid } from "react-icons/lia";

@@ -1,4 +1,4 @@
-import { FaShieldAlt, FaStar, FaClock } from "react-icons/fa";
+// import { FaShieldAlt, FaStar, FaClock } from "react-icons/fa";
 import { IoShieldOutline } from "react-icons/io5";
 import { IoStarOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
