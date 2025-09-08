@@ -1,5 +1,7 @@
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // Custom arrow components for slider
 const CustomPrevArrow = ({ onClick }: any) => (
@@ -66,69 +68,78 @@ const Testimonials = () => {
     nextArrow: <CustomNextArrow />,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
+        breakpoint: 1024, // screens <= 1024px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
       },
       {
-        breakpoint: 640,
-        settings: { slidesToShow: 1, slidesToScroll: 1 },
+        breakpoint: 768, // screens <= 768px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // screens <= 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false, // optional: hide arrows on very small devices
+        },
       },
     ],
   };
 
   return (
-    <div>
-      {/* Testimonials */}
-      <section className="py-20 bg-[#f3f5f7]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-0">
-          {/* Heading */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Real reviews from satisfied car owners
-            </p>
-          </div>
+    <section className="py-20 bg-[#f3f5f7]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-0">
+        {/* Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            What Our Customers Say
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Real reviews from satisfied car owners
+          </p>
+        </div>
 
-          {/* Slider */}
-          <div className="relative">
-            <Slider {...sliderSettings}>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="px-3">
-                  <div className="bg-white rounded-xl shadow-md p-6 h-full hover:shadow-lg transition-shadow duration-300">
-                    {/* Stars */}
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <FaStar
-                          key={i}
-                          className="h-5 w-5 text-yellow-400 fill-current"
-                        />
-                      ))}
-                    </div>
+        {/* Slider */}
+        <div className="relative">
+          <Slider {...sliderSettings}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="px-3">
+                <div className="bg-white rounded-xl shadow-md p-6 h-full hover:shadow-lg transition-shadow duration-300">
+                  {/* Stars */}
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <FaStar
+                        key={i}
+                        className="h-5 w-5 text-yellow-400 fill-current"
+                      />
+                    ))}
+                  </div>
 
-                    {/* Review Text */}
-                    <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                      "{testimonial.text}"
+                  {/* Review Text */}
+                  <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+
+                  {/* Reviewer Info */}
+                  <div className="border-t border-gray-300 pt-4">
+                    <p className="font-semibold text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {testimonial.location}
                     </p>
-
-                    {/* Reviewer Info */}
-                    <div className="border-t border-gray-300 pt-4">
-                      <p className="font-semibold text-sm">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        {testimonial.location}
-                      </p>
-                    </div>
                   </div>
                 </div>
-              ))}
-            </Slider>
-          </div>
+              </div>
+            ))}
+          </Slider>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
