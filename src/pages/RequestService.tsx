@@ -4,7 +4,7 @@ import { GiCheckMark } from "react-icons/gi";
 import { FiCamera } from "react-icons/fi";
 import { BsCloudUpload } from "react-icons/bs";
 import {
-  FaUpload,
+  
 FaCheckCircle,
   FaCar,
   FaMapMarkerAlt,
