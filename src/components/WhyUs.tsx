@@ -12,7 +12,7 @@ const WhyUs = () => {
           {/* Heading */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose FixMyCar UK?
+              Why Choose MConnectC UK?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               We make car repairs simple, transparent, and trustworthy
